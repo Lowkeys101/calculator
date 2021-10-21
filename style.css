@@ -1,0 +1,10 @@
+.container {
+    max-width: 900px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+button {
+    height: 30px;
+}
