@@ -34,7 +34,7 @@ let operatorValue;
 
 const handleButtons = function(e) {
     
-    const buttonTextContent = e.target.textContent;
+    const buttonTextContent = e.target.dataset.item;
     if (isNaN(buttonTextContent)){
         if (buttonTextContent.toLowerCase() === "clear") {
             displayValue = "0";
@@ -45,6 +45,7 @@ const handleButtons = function(e) {
         } else if (buttonTextContent.toLowerCase() === "=") {
             secondValue = displayValue;
             displayValue = operate(operatorValue, firstValue, secondValue);
+            operatorPressed = false;
         } else {
             if(operatorPressed === true) {
                 secondValue = displayValue;
